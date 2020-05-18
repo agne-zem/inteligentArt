@@ -1,0 +1,289 @@
+{% extends "header.html" %}
+{% block content %}
+    <div class="upload-container">
+        <div class="content-image-upload-block">
+            <div class="label">
+                <p>
+                    Select content image
+                </p>
+            </div>
+            <p>Select one image.</p>
+            <div class="content-image-container">
+                <div class="content-upload">
+                    <input type="file" id="content-img-upload" style="display: none;" />
+                    <input class="input-button" type="button" value="Select image"
+                           onclick="document.getElementById('content-img-upload').click();"
+                    />
+                </div>
+                <div class="content-image-frame">
+                    <img class="image hide" id="content-img-id" src="" alt="content image"/>
+                </div>
+            </div>
+            <div class="content-image-text">
+                <p>While choosing image for content, keep in mind, that the important part is WHAT is pictured,
+                    e.g. a photo of complicated figure (cat, human, bottle, house etc)</p>
+            </div>
+        </div>
+        <div class="style-images-upload-block">
+            <div class="label">
+                <p>
+                    Select style images
+                </p>
+            </div>
+            <p>Select one style image, or up to 4.</p>
+            <div class="style-images-container">
+                <div class="style-container">
+                    <div class="style-block">
+                        <div class="style-upload">
+                            <input type="file" id="style-img-upload1" style="display: none;" />
+                            <input class="input-button" type="button" value="Select image"
+                                   onclick="document.getElementById('style-img-upload1').click();" />
+                        </div>
+                        <div class="image-frame">
+                            <img class="hide" id="style-img-id1" src="" alt="style image"/>
+                        </div>
+                        <button class="remove-button hide"
+                                id="remove1"
+                                onclick="removeImage('#style-img-id1', '#remove1', '#style-img-upload1')">
+                                <span>Remove</span>
+                        </button>
+                    </div>
+                    <div class="style-block">
+                        <div class="style-block-frame">
+                            <div class="style-upload">
+                                <input type="file" id="style-img-upload2" style="display: none;" />
+                                <input class="input-button" type="button" value="Select image"
+                                       onclick="document.getElementById('style-img-upload2').click();" />
+                            </div>
+                            <div class="image-frame">
+                                <img class="hide" id="style-img-id2" src="" alt="style image"/>
+                            </div>
+                            <button class="remove-button hide"
+                                    id="remove2"
+                                    onclick="removeImage('#style-img-id2', '#remove2', '#style-img-upload2')">
+                                    <span>Remove</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="style-container">
+                    <div class="style-block">
+                        <div class="style-block-frame">
+                            <div class="style-upload">
+                                <input type="file" id="style-img-upload3" style="display: none;" />
+                                <input class="input-button" type="button" value="Select image"
+                                       onclick="document.getElementById('style-img-upload3').click();" />
+                            </div>
+                            <div class="image-frame">
+                                <img class="hide" id="style-img-id3" src="" alt="style image"/>
+                            </div>
+                            <button class="remove-button hide"
+                                    id="remove3"
+                                    onclick="removeImage('#style-img-id3', '#remove3', '#style-img-upload3')">
+                                    <span>Remove</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="style-block">
+                        <div class="style-block-frame">
+                            <div class="style-upload">
+                                <input type="file" id="style-img-upload4" style="display: none;" />
+                                <input class="input-button" type="button" value="Select image"
+                                       onclick="document.getElementById('style-img-upload4').click();" />
+                            </div>
+                            <div class="image-frame">
+                                <img class="hide" id="style-img-id4" src="" alt="style image"/>
+                            </div>
+                            <button class="remove-button hide"
+                                    id="remove4"
+                                    onclick="removeImage('#style-img-id4', '#remove4', '#style-img-upload4')">
+                                    <span>Remove</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="style-images-text">
+                <p>For style images, it's more important HOW the image is portrayed.
+                    Best style images are paintings.</p>
+            </div>
+        </div>
+    </div>
+    <div class="config-container">
+        <div class="label">
+            <p>
+                Configure settings
+            </p>
+        </div>
+
+        <p class="option-title">Select generating type:</p>
+        <div class="more-info">
+            <span><i style="font-size:24px"
+                    class="fa">&#xf059;</i>
+            </span>
+            <span class="more-info-popup">
+                "Normal" - all of the style and content
+                features given with input images will be included in calculation of
+                the generated image.
+                "Experimental" - some of the features will be left out. The result,
+                based on what type you choose,
+                will most likely differ a lot.
+            </span>
+        </div>
+        <fieldset name="style-layers-option">
+            <label for="type1">Normal</label>
+            <input  class="generate-type-select" type="radio" name="type"
+                    id="type1" checked>
+            <label for="type2">Experimental</label>
+            <input  class="generate-type-select" type="radio" name="type"
+                    id="type2">
+        </fieldset>
+
+        <p class="option-title">Content weight:</p>
+        <div class="more-info">
+            <span>
+                <i style="font-size:24px"
+                   class="fa">&#xf059;</i>
+            </span>
+            <span class="more-info-popup2">
+                Increasing this parameter will result in generated image appearing more like
+                the content image then the style images.
+            </span>
+        </div>
+        <fieldset name="content-weight-option">
+            <span>less</span>
+            <input class="input-range"
+                   id="content-weight-id"
+                   type="range"
+                   value="10"
+                   min="10"
+                   max="1000000"
+                   step="20000">
+            <span>more</span>
+            <span class="range-value hide" id="content-span-id"></span>
+        </fieldset>
+
+        <p class="option-title">Style details:</p>
+        <div class="more-info">
+            <span><i style="font-size:24px"
+                     class="fa">&#xf059;</i>
+            </span>
+            <span class="more-info-popup3">
+                Increasing this parameter will result in more detailed style features appearing in
+                the generated image.
+            </span>
+        </div>
+        <fieldset name="epoch-option">
+            <span>less</span>
+            <input class="input-range" id="epoch-range-id" type="range" value="2" min="1" max="5">
+            <span>more</span>
+            <span class="range-value hide" id="epoch-span-id"></span>
+        </fieldset>
+
+        <p class="option-title">Quality of style details:</p>
+        <div class="more-info">
+            <span><i style="font-size:24px" class="fa">&#xf059;</i>
+            </span>
+            <span class="more-info-popup4">
+                Increasing this parameter will result in more clear style image details in the generated
+                image. Keep in mind that leaving this at maximum will take more time to generate
+                the image.
+            </span>
+        </div>
+        <fieldset name="steps-option">
+            <span>low</span>
+            <input class="input-range" id="steps-range-id" type="range" value="10" min="1" max="50">
+            <span>high</span>
+            <span class="range-value hide" id="steps-value-id"></span>
+        </fieldset>
+        <div class="test-button-container">
+            <button class="button" id="check-btn-id" hidden><span>Check time</span></button>
+            <p>Before generating, we need to test out the settings. Image generation process takes some time, so
+            first we check if you like your settings. The test will give you a smaller sample generated image
+            with your settings and two other images with randomly selected ones. After that you can choose from those
+            images and generate a bigger picture or you can try out other settings and test again.</p>
+            <p>Keep in mind that some of the content image small details (for example, a person standing far away,
+                window of a big house) are lost because of how small the sample is. Generating
+            bigger image will most likely have the smaller details. Testing is used for getting the general
+            idea of the chosen settings.</p>
+            <button class="button" id="test-btn-id"><span>Test</span></button>
+        </div>
+    </div>
+    <div class="testing-container" id="testing-container-id" >
+        <p class="loader-text hide" id="test-loader-text">Please wait, this will take up to a minute.</p>
+        <div class="lds-ellipsis hide" id="test-loader"><div></div><div></div><div></div><div></div></div>
+            <div class="select-test-text hide">
+                <p>Select an image:</p>
+            </div>
+            <div class="testing-images-container hide" id="testing-images-container-id">
+            <div class="testing-image-block">
+                <img class="test-img" id="test-generated1-img-id" src="" alt=""/>
+                <input class="test-img-select" type="radio" name="test" id="test1" value="" checked>
+                <label for="test1">Your custom settings</label>
+            </div>
+            <div class="testing-image-block">
+                <img class="test-img" id="test-generated2-img-id" src="" alt=""/>
+                <input class="test-img-select" type="radio" name="test" id="test2" value="">
+                <label for="test2">Randomly selected settings</label>
+            </div>
+            <div class="testing-image-block">
+                <img class="test-img" id="test-generated3-img-id" src="" alt=""/>
+                <input class="test-img-select" type="radio" name="test" id="test3" value="">
+                <label for="test3">Randomly selected settings</label>
+            </div>
+        </div>
+        <div class="check-text-container" id="check-container-id">
+            <div class="lds-ellipsis hide" id="check-loader"><div></div><div></div><div></div><div></div></div>
+            <p id="check-text-id"></p>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="generate-container hide" id="generate-container-id">
+        <p class="generate-button-disable-text hide" id="generate-text">The settings of images have been changed.
+            Testing required before generating.</p>
+        <button class="button hide" type="submit" id="generate-btn-id">
+             <span>
+                Generate
+            </span>
+        </button>
+    </div>
+    <div class="result-image-container hide" id="result-container-id" >
+        <div class="image-container">
+            <div class="lds-ellipsis hide" id="loader"><div></div><div></div><div></div><div></div></div>
+            <img id="generated-img-id" src="" alt=""/>
+        </div>
+        <div class="save-container hide" id="save-container-id">
+            <a href="" download="mygeneratedimage.png" class="save-image" id="save-id">
+                <p>
+                    Download image
+                </p>
+            </a>
+        </div>
+        <div class="review-popup-container" id="review-container-id">
+        <div class="content">
+            <p class="label">Did you like the image?</p>
+            <p class="text">Please leave a rating for further development. The rating should represent how much you like the image,
+            where 1 star is "The image doesn't look good at all..." and 10 is "I love it! it's very pretty!"</p>
+            <form id="user-rating-form">
+                <span class="user-rating">
+                    <input type="radio" name="rating" value="10"><span class="star"></span>
+                    <input type="radio" name="rating" value="9"><span class="star"></span>
+                    <input type="radio" name="rating" value="8"><span class="star"></span>
+                    <input type="radio" name="rating" value="7"><span class="star"></span>
+                    <input type="radio" name="rating" value="6"><span class="star"></span>
+                    <input type="radio" name="rating" value="5"><span class="star"></span>
+                    <input type="radio" name="rating" value="4"><span class="star"></span>
+                    <input type="radio" name="rating" value="3"><span class="star"></span>
+                    <input type="radio" name="rating" value="2"><span class="star"></span>
+                    <input type="radio" name="rating" value="1" checked><span class="star"></span>
+                </span>
+            </form>
+            <div style="position: relative">
+                <div class="lds-ellipsis hide" id="review-loader"><div></div><div></div><div></div><div></div></div>
+                <button class="button" id="review-btn-id">Submit</button>
+            </div>
+            <p class="label hide" id="thank-you-id">Thank you!</p>
+        </div>
+    </div>
+    </div>
+{% endblock content %}

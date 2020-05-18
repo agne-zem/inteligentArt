@@ -1,0 +1,132 @@
+@import "variables/_colors.less";
+@import "variables/_font.less";
+@import "variables/_responsive.less";
+@import "variables/_loader.less";
+
+body,
+html
+{
+  font-family: @sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: @dark-slate-gray;
+  border-bottom: 2px solid @gainsboro;
+}
+
+footer {
+  background: @dark-slate-gray;
+  padding: 3%;
+
+  color: @whitesmoke;
+  font-size: @font-xs;
+  font-weight: @bold;
+  text-align: right;
+}
+
+.header-container {
+  position: relative;
+  margin-right: 7%;
+  margin-left: 7%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+
+  .header-title {
+    margin-top: auto;
+    bottom: 0;
+    font-weight: @extra-bold;
+    border-bottom: 2px solid @gainsboro;
+  }
+
+  a {
+    text-decoration: none;
+    color: @gainsboro;
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-about,
+  .menu-create {
+    bottom: 0;
+    margin-top: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    &:hover p {
+      font-weight: @extra-bold;
+    }
+  }
+
+  .header-menu p {
+    margin-bottom: 0;
+    font-size: @font-md;
+    border-bottom: 2px solid @gainsboro;
+    font-weight: @regular;
+  }
+}
+
+//desktop
+@media (min-width: @break-lg) {
+  .header-container {
+    flex-direction: row;
+  }
+
+  .header-title {
+    width: 70%;
+  }
+
+  .header-title p {
+    font-size: @font-xl;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+//tablet
+@media (max-width: @break-lg) {
+  .header-container {
+    flex-direction: row;
+  }
+
+  .header-title {
+    width: 70%;
+  }
+
+  .header-title p {
+    font-size: @font-lg;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+//mobile
+@media (max-width: @break-sm) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .header-title {
+    text-align: center;
+  }
+
+  .header-menu {
+    justify-content: flex-end;
+  }
+
+  .header-title {
+    width: 100%;
+  }
+
+  .header-title p {
+    font-size: @font-md;
+    margin-bottom: 4px;
+  }
+}

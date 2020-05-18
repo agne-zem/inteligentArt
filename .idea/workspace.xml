@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bcbe62dd-ed85-45f6-9804-1a1283e8cf4c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/intelligentart" />
+  </component>
+  <component name="ProjectId" id="1bPGP7msOw8eV1wGUxURgovJ5Ik" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bakalauro_darbas" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\agnzem1\Desktop\inteligentArt\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\agnzem1\Desktop\inteligentArt\inteligentart" />
+      <recent name="C:\Users\agnzem1\Desktop\inteligentArt\static\js" />
+      <recent name="C:\Users\agnzem1\Desktop\inteligentArt\static\img" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="intelligentArt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcbe62dd-ed85-45f6-9804-1a1283e8cf4c" name="Default Changelist" comment="" />
+      <created>1588526287861</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588526287861</updated>
+      <workItem from="1588526298823" duration="4045000" />
+      <workItem from="1588611785682" duration="9553000" />
+      <workItem from="1588662869590" duration="33459000" />
+      <workItem from="1588752758988" duration="10728000" />
+      <workItem from="1589043790585" duration="600000" />
+      <workItem from="1589096153964" duration="15024000" />
+      <workItem from="1589188316151" duration="30328000" />
+      <workItem from="1589275059807" duration="3786000" />
+      <workItem from="1589371059856" duration="6030000" />
+      <workItem from="1589452205564" duration="23846000" />
+      <workItem from="1589531734510" duration="28268000" />
+      <workItem from="1589568949161" duration="6288000" />
+      <workItem from="1589612748298" duration="49844000" />
+      <workItem from="1589709275219" duration="24224000" />
+      <workItem from="1589765313693" duration="5531000" />
+      <workItem from="1589771053288" duration="62000" />
+      <workItem from="1589771152266" duration="1386000" />
+      <workItem from="1589783140990" duration="942000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="761" y="372" key="#Configure_Path_Variables" timestamp="1589709832295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="761" y="372" key="#Configure_Path_Variables/0.0.1920.1040@0.0.1920.1040" timestamp="1589709832295" />
+    <state x="552" y="178" key="#Deployment" timestamp="1589770852073">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1589770852073" />
+    <state x="586" y="198" key="#Inspections" timestamp="1588533366057">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1588533366057" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589771432188">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589771432188" />
+    <state x="715" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589488285733">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589488285733" />
+    <state x="1089" y="400" width="663" height="640" key="EditFileWatcherDialog" timestamp="1588619458662">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1089" y="400" width="663" height="640" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588619458662" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589772537764">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589772537764" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1588622621333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588622621333" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1588622621333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588622621333" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1588622621333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588622621333" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1588622621333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588622621333" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1589569327342">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1589569327342" />
+    <state x="782" y="47" key="SettingsEditor" timestamp="1589772488520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="782" y="47" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589772488520" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589783189106">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589783189106" />
+    <state x="667" y="122" width="585" height="795" key="find.popup" timestamp="1589717922929">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="122" width="585" height="795" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589717922929" />
+    <state x="803" y="292" key="refactoring.ChangeSignatureDialog" timestamp="1589476745576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="292" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589476745576" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/inteligentArt$inteligentArt.coverage" NAME="inteligentArt Coverage Results" MODIFIED="1588622313251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

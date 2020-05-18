@@ -1,0 +1,58 @@
+@import "_colors.less";
+
+form {
+    margin-left: 3%;
+}
+
+.user-rating {
+    direction: rtl;
+    font-size: 20px;
+    unicode-bidi: bidi-override;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.user-rating input {
+    opacity: 0;
+    position: relative;
+    left: -15px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.user-rating span.star:before {
+    color: #777777;
+    content:"ï€†";
+    /*padding-right: 5px;*/
+}
+
+.user-rating span.star {
+    display: inline-block;
+    font-family: FontAwesome, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+}
+
+.user-rating span {
+    margin-left: -15px;
+}
+
+.user-rating span.star:before {
+    color: #777777;
+    content:"\f006";
+    /*padding-right: 5px;*/
+}
+
+.user-rating input:hover + span.star:before, .user-rating input:hover + span.star ~ span.star:before,
+.user-rating input:checked + span.star:before, .user-rating input:checked + span.star ~ span.star:before {
+    color: @dark-slate-gray;
+    content:"\f005";
+}
+
+.selected-rating {
+    color: @dark-slate-gray;
+    font-weight: bold;
+    font-size: 3em;
+}

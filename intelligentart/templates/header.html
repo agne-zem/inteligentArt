@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    {% if title %}
+        <title>Intelligent Art - {{ title }}</title>
+    {% else %}
+        <title>Intelligent Art</title>
+    {% endif %}
+    {{ JSGlue.include() }}
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="header-title">
+            <a href="{{ url_for('home') }}">
+                <p>
+                    Intelligent Art
+                </p>
+            </a>
+        </div>
+        <div class="header-menu">
+            <div class="menu-create">
+                <a href="{{ url_for('create') }}">
+                    <p>Create</p>
+                </a>
+            </div>
+            <div class="menu-about">
+                <a href="{{ url_for('about') }}">
+                    <p>About</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main-content">
+    {% block content %} {% endblock content %}
+</div>
+<footer>
+    <div>
+        <p>If you'd like to report a bug please write an email to agne.zemeckyte@gmail.com. </p>
+        <p>Thank you for using this site!</p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{{ url_for('static', filename='js/switch-text.js') }}"></script>
+<script src="{{ url_for('static', filename='js/create-image.js') }}"></script>
+<script src="{{ url_for('static', filename='js/toggle-range.js') }}"></script>
+<script src="{{ url_for('static', filename='js/check-time.js') }}"></script>
+</body>
+</html>

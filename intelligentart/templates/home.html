@@ -1,0 +1,103 @@
+{% extends "header.html" %}
+{% block content %}
+    <div class="welcome-container">
+        <div class="welcome-image-container">
+            <img src="{{ url_for('static', filename='img/welcome.png') }}" alt="welcome image">
+        </div>
+        <div class="welcome-text-container">
+            <div class="welcome-title">
+                <p>
+                    Welcome
+                </p>
+            </div>
+            <div class="welcome-text">
+                <p>
+                    Art is an integral part of human life. Creativity can be used to express what you feel,
+                    what you think, to convey even what cannot be expressed in words. Nowadays, the growing number
+                    of areas where Artificial intelligence can be used grows very fast. Creating images using AI not
+                    only helps to better understand how AI works, but also allows you to create exceptional images
+                    that would probably be quite difficult to replicate without the help of AI.
+                </p>
+                 <p>This website allows you to combine multiple images using AI.</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="showcase-container">
+        <div class="showcase-label">
+            <p class="showcase-title">Showcase</p>
+            <p class="showcase-text"></p>
+        </div>
+        <div class="gallery">
+            <div class="gallery-entry">
+                <div class="gallery-content-container">
+                    <div class="gallery-generated-frame">
+                        <img class="gallery-generated-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="gallery-style-container">
+                    <div class="gallery-content-frame">
+                        <img class="gallery-content-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                    <div class="gallery-style-frame">
+                        <img class="gallery-style-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="gallery-entry">
+                <div class="gallery-generated-frame">
+                    <img class="gallery-generated-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                </div>
+                <div class="gallery-style-container">
+                    <div class="gallery-content-frame">
+                        <img class="gallery-content-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                    <div class="gallery-style-frame">
+                        <img class="gallery-style-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                    <div class="gallery-style-frame">
+                        <img class="gallery-style-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="gallery-entry">
+                <div class="gallery-generated-frame">
+                    <img class="gallery-generated-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                </div>
+                <div class="gallery-style-container">
+                    <div class="gallery-content-frame">
+                        <img class="gallery-content-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                    <div class="gallery-style-frame">
+                        <img class="gallery-style-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="gallery-entry">
+                <div class="gallery-generated-frame">
+                    <img class="gallery-generated-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                </div>
+                <div class="gallery-style-container">
+                    <div class="gallery-content-frame">
+                        <img class="gallery-content-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                    <div class="gallery-style-frame">
+                        <img class="gallery-style-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                    <div class="gallery-style-frame">
+                        <img class="gallery-style-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                    <div class="gallery-style-frame">
+                        <img class="gallery-style-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                    <div class="gallery-style-frame">
+                        <img class="gallery-style-img" src="{{ url_for('static', filename='img/welcome.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
