@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcbe62dd-ed85-45f6-9804-1a1283e8cf4c" name="Default Changelist" comment="" />
+    <list default="true" id="bcbe62dd-ed85-45f6-9804-1a1283e8cf4c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/intelligentart" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bPGP7msOw8eV1wGUxURgovJ5Ik" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,6 +50,7 @@
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../bakalauro_darbas" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -37,7 +59,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -100,12 +122,27 @@
       <workItem from="1589765313693" duration="5531000" />
       <workItem from="1589771053288" duration="62000" />
       <workItem from="1589771152266" duration="1386000" />
-      <workItem from="1589783140990" duration="942000" />
+      <workItem from="1589783140990" duration="1185000" />
+      <workItem from="1589829986977" duration="9006000" />
+      <workItem from="1589875349201" duration="9063000" />
+      <workItem from="1589915036319" duration="1213000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="761" y="372" key="#Configure_Path_Variables" timestamp="1589709832295">
@@ -128,10 +165,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="715" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589488285733" />
-    <state x="1089" y="400" width="663" height="640" key="EditFileWatcherDialog" timestamp="1588619458662">
+    <state x="1089" y="400" width="663" height="640" key="EditFileWatcherDialog" timestamp="1589836969942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="400" width="663" height="640" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588619458662" />
+    <state x="1089" y="400" width="663" height="640" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589836969942" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589772537764">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -156,10 +193,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1589569327342" />
-    <state x="782" y="47" key="SettingsEditor" timestamp="1589772488520">
+    <state x="782" y="47" key="SettingsEditor" timestamp="1589836972591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="782" y="47" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589772488520" />
+    <state x="782" y="47" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589836972591" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589783189106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

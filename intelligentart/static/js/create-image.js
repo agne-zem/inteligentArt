@@ -18,6 +18,7 @@ function disableEverything() {
     $('#test-btn-id').prop('disabled', true);
     $('#generate-btn-id').prop('disabled', true);
     $('.remove-button').prop('disabled', true);
+    $('#review-btn-id').prop('disabled', true);
 }
 
 function enableEverything() {
@@ -28,6 +29,7 @@ function enableEverything() {
     $('#test-btn-id').prop('disabled', false);
     $('#generate-btn-id').prop('disabled', false);
     $('.remove-button').prop('disabled', false);
+    $('#review-btn-id').prop('disabled', false);
 }
 
 //removes image with button click
@@ -37,6 +39,7 @@ function removeImage(image_id, button_id, input_id) {
     hide(image_id)
     hide(button_id);
     $('#generate-btn-id').prop('disabled', true);
+    hide('#review-container-id');
 }
 
 //file reader function
@@ -79,7 +82,7 @@ function getContentLayer() {
     let content_layer = [];
 
     if ($('#type2').prop("checked") === true) {
-        content_layer.push('block2_conv2')
+        content_layer.push('block5_conv2')
     }
 
     else {
@@ -198,11 +201,11 @@ $(document).ready(function() {
         if(!validation()) {
             return;
         }
-
         disableEverything();
         hide('#generate-container');
-        hide('#result-image-container');
+        hide('#generate-container-id');
         hide('#review-popup-container');
+        hide('#result-container-id');
         hide('#check-text-id');
         hide('.select-test-text');
         hide('#generate-btn-id');
@@ -220,6 +223,7 @@ $(document).ready(function() {
         let epochs = $('#epoch-range-id').val();
         let steps =  $('#steps-range-id').val();
         let content_weight =  $('#content-weight-id').val();
+        console.log($('#content-weight-id').val());
         let style_layers = getStyleLayers();
         let content_layer = getContentLayer();
 
@@ -239,6 +243,7 @@ $(document).ready(function() {
                 enableEverything();
                 hide('#test-loader');
                 hide('#test-loader-text');
+                hide('#thank-you-id');
                 show('#testing-images-container-id');
                 show('.select-test-text');
                 $('#generate-btn-id').prop('disabled', false);
@@ -290,6 +295,7 @@ $(document).ready(function() {
                 show('#review-container-id');
                 hide('#loader');
                 show('#save-container-id');
+                show('#review-btn-id');
                 $('#save-id').attr('href', "/static/generated/" + response.result.generated_image)
                     .attr('download', Date.now());
                 $('#generated-img-id').attr('src', "/static/generated/" + response.result.generated_image)
@@ -315,6 +321,7 @@ $(document).ready(function() {
             function (response) {
                 show('#thank-you-id');
                 hide('#review-loader');
+                hide('#review-btn-id');
                 enableEverything();
             });
     });

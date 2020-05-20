@@ -210,6 +210,11 @@ footer {
   margin-top: 0;
   margin-bottom: 16px;
 }
+.gallery-text {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #696969;
+}
 .separator {
   border-bottom: 2px solid #2F4F4F;
   margin-top: 3%;

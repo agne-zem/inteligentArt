@@ -18,7 +18,7 @@ import random
 tf.compat.v1.enable_eager_execution()
 
 style_weight = 1e-2
-opt = optimizers.Adam(learning_rate=0.02, beta_1=0.99, epsilon=1e-1)
+opt = optimizers.Adam(learning_rate=0.09, beta_1=0.99, epsilon=1e-1)
 
 # =================== HELPERS ====================
 
@@ -117,9 +117,8 @@ def shrink(img, max_dim):
     return img
 
 
-def merge_and_save(identifier, style_image_count, max_dim, resample=Image.BICUBIC):
+def merge_and_save(identifier, style_image_count, resample=Image.BICUBIC):
     merged = Image
-
     img1 = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], identifier.hex + 'style0' + '.png'))
     img2 = Image.open(os.path.join(app.config['UPLOAD_FOLDER'], identifier.hex + 'style1' + '.png'))
     img2 = img2.resize((int(img2.width * img1.height / img2.height), img1.height), resample=resample)
@@ -156,7 +155,6 @@ def merge_and_save(identifier, style_image_count, max_dim, resample=Image.BICUBI
         merged = merged4
 
     style_image_name = identifier.hex + 'style_m' + '.png'
-    merged = shrink(merged, max_dim)
     merged.save(os.path.join(app.config['UPLOAD_FOLDER'], style_image_name))
 
 
@@ -216,7 +214,7 @@ def run_test(identifier, encoded_content_image, encoded_style_images, epochs, st
 
     # merging style images together into one
     if style_image_count > 1:
-        merge_and_save(identifier, style_image_count, max_dim)
+        merge_and_save(identifier, style_image_count)
         style_image = preprocess_image(os.path.join(app.config['UPLOAD_FOLDER'], identifier.hex + 'style_m' + '.png')
                                        , max_dim)
     else:

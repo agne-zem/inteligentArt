@@ -155,10 +155,11 @@
             <input class="input-range"
                    id="content-weight-id"
                    type="range"
-                   value="10"
-                   min="10"
-                   max="1000000"
-                   step="20000">
+                   value="2"
+                   min="1"
+                   max="5000"
+                   step="1"
+                   onchange="updateTextInput(this.value);">
             <span>more</span>
             <span class="range-value hide" id="content-span-id"></span>
         </fieldset>
