@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcbe62dd-ed85-45f6-9804-1a1283e8cf4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intelligentArt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intelligentArt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="bcbe62dd-ed85-45f6-9804-1a1283e8cf4c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,7 +134,7 @@
       <workItem from="1590355821048" duration="8488000" />
       <workItem from="1590390095236" duration="21568000" />
       <workItem from="1590490786457" duration="269000" />
-      <workItem from="1590586808194" duration="9419000" />
+      <workItem from="1590586808194" duration="10089000" />
     </task>
     <servers />
   </component>
@@ -207,10 +202,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1589957105502" />
-    <state x="782" y="47" key="SettingsEditor" timestamp="1590635825906">
+    <state x="782" y="47" key="SettingsEditor" timestamp="1590658267525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="782" y="47" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590635825906" />
+    <state x="782" y="47" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590658267525" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589955670228">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
