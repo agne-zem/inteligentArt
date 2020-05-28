@@ -82,11 +82,11 @@ function getContentLayer() {
     let content_layer = [];
 
     if ($('#type2').prop("checked") === true) {
-        content_layer.push('block5_conv2')
+        content_layer.push('block2_conv2')
     }
 
     else {
-        content_layer.push('block5_conv2')
+        content_layer.push('block4_conv2')
     }
 
     return content_layer;

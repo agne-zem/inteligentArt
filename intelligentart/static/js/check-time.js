@@ -18,6 +18,9 @@ function check() {
     if ($('#test3').prop("checked") === true) {
         img = $('#test3').val();
     }
+    if ($('#test4').prop("checked") === true) {
+    img = $('#test4').val();
+    }
 
     let message = {
         image: img

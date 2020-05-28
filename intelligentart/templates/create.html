@@ -122,7 +122,7 @@
                     class="fa">&#xf059;</i>
             </span>
             <span class="more-info-popup">
-                "Normal" - all of the style and content
+                "Traditional" - all of the style and content
                 features given with input images will be included in calculation of
                 the generated image.
                 "Experimental" - some of the features will be left out. The result,
@@ -131,7 +131,7 @@
             </span>
         </div>
         <fieldset name="style-layers-option">
-            <label for="type1">Normal</label>
+            <label for="type1">Traditional</label>
             <input  class="generate-type-select" type="radio" name="type"
                     id="type1" checked>
             <label for="type2">Experimental</label>
@@ -155,9 +155,9 @@
             <input class="input-range"
                    id="content-weight-id"
                    type="range"
-                   value="2"
+                   value="1"
                    min="1"
-                   max="5000"
+                   max="150"
                    step="1"
                    onchange="updateTextInput(this.value);">
             <span>more</span>
@@ -230,7 +230,7 @@
             <div class="testing-image-block">
                 <img class="test-img" id="test-generated3-img-id" src="" alt=""/>
                 <input class="test-img-select" type="radio" name="test" id="test3" value="">
-                <label for="test3">Randomly selected settings</label>
+                <label for="test3">Suggested settings</label>
             </div>
         </div>
         <div class="check-text-container" id="check-container-id">

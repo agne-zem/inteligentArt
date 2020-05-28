@@ -1,7 +1,29 @@
 {% extends "header.html" %}
 {% block content %}
-<div style="height: 62vh">
-<p>Sorry, a dog ate this part of the website :(</p>
-<p>It will be done soon!</p>
+<div class="about-container">
+    <div class="about-title">About this website</div>
+    <div class="about-text">
+        <p>This website is a part of Bachelor's degree final project, the aim of which is to
+        create a system that allows the user to create images based on content and style images using artificial
+        intelligence deep learning algorithms and based on the system's experience, to provide the selected images
+        with the recommended optional system parameters for image creation.
+        </p>
+    </div>
 </div>
+<div class="about-images" >
+        <div class="gallery-style-container">
+            <div class="gallery-content-frame" >
+                <img class="gallery-content-img" style="width: 100%" src="{{ url_for('static', filename='img/ab1.png') }}" alt="">
+            </div>
+            <div class="gallery-style-frame">
+                <img class="gallery-style-img" style="width: 100%"  src="{{ url_for('static', filename='img/ab2.png') }}" alt="">
+            </div>
+            <div class="gallery-style-frame">
+                <img class="gallery-style-img" style="width: 100%"  src="{{ url_for('static', filename='img/ab3.png') }}" alt="">
+            </div>
+            <div class="gallery-style-frame">
+                <img class="gallery-style-img" style="width: 100%"  src="{{ url_for('static', filename='img/ab4.png') }}" alt="">
+            </div>
+        </div>
+    </div>
 {% endblock content %}

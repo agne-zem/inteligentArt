@@ -15,11 +15,12 @@ class Content(db.Model):
 
 class Style(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    file_name = db.Column(db.String(120), unique=True,nullable=False)
+    file_name = db.Column(db.String(120), unique=True, nullable=False)
+    used = db.Column(db.Boolean, nullable=False, default=False)
     fk_content_id = db.Column(db.Integer, db.ForeignKey('content.id'), nullable=False)
 
     def __repr__(self):
-        return f"Style('{self.id}', '{self.file_name}', '{self.fk_content_id}')"
+        return f"Style('{self.id}','{self.used}', '{self.file_name}', '{self.fk_content_id}')"
 
 
 class Generated(db.Model):
@@ -29,12 +30,12 @@ class Generated(db.Model):
     type = db.Column(db.Integer, nullable=False, default=1)
     content_weight = db.Column(db.Integer, nullable=False)
     selected = db.Column(db.Boolean, nullable=False, default=False)
-    custom = db.Column(db.Boolean, nullable=False, default=True)
+    configuration_type = db.Column(db.Integer, nullable=False, default=1)
     epochs = db.Column(db.Integer, nullable=False, default=2)
     steps = db.Column(db.Integer, nullable=False, default=20)
     fk_content_id = db.Column(db.Integer, db.ForeignKey('content.id'), nullable=False)
 
     def __repr__(self):
         return f"Generated('{self.id}', '{self.file_name}', '{self.rating}'," \
-               f"'{self.type}', '{self.content_weight}', '{self.selected}', '{self.custom}', '{self.epochs}', " \
+               f"'{self.type}', '{self.content_weight}', '{self.selected}', '{self.configuration_type}', '{self.epochs}', " \
                f"'{self.steps}', '{self.fk_content_id}')"

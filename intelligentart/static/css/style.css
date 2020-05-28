@@ -275,7 +275,7 @@ footer {
 .gallery-style-frame img,
 .gallery-content-frame img {
   max-height: 100%;
-  width: 100%;
+  max-width: 100%;
 }
 @media (min-width: 1200px) {
   .welcome-image-container img {
@@ -303,8 +303,8 @@ footer {
   }
   .gallery-style-frame,
   .gallery-content-frame {
-    max-height: 224px;
-    max-width: 224px;
+    height: 224px;
+    width: 224px;
   }
 }
 @media (max-width: 1200px) {
@@ -738,6 +738,9 @@ form {
   position: relative;
   margin-bottom: 7%;
 }
+.result-image-container img {
+  max-width: 100%;
+}
 .config-container {
   margin-top: 3%;
 }
@@ -903,6 +906,30 @@ form {
   .content-image-container img {
     max-height: 256px;
   }
+}
+.about-container {
+  color: #696969;
+  border: 2px solid #696969;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  width: 100%;
+  margin-bottom: 7%;
+}
+.about-container p {
+  margin-right: 15%;
+}
+.about-container .about-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding-bottom: 2%;
+}
+.about-container .about-text {
+  font-weight: 700;
+}
+.about-images {
+  margin-bottom: 15%;
 }
 body,
 html {
