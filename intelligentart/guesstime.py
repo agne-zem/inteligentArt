@@ -3,8 +3,8 @@ from scipy.interpolate import griddata
 from intelligentart.models import Generated
 
 
+# function for estimating how long will the image generation take
 def run_guess(image):
-
     selected_image = Generated.query.filter_by(file_name=image).first()
     epochs = selected_image.epochs
     steps_per_epoch = selected_image.steps

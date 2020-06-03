@@ -7,8 +7,9 @@ import pickle
 from cv2 import cvtColor, imread, COLOR_BGR2HSV
 
 
+# =========== HELPERS =========================================================================================
 def unique_count_app(a):
-    colors, count = np.unique(a.reshape(-1,a.shape[-1]), axis=0, return_counts=True)
+    colors, count = np.unique(a.reshape(-1, a.shape[-1]), axis=0, return_counts=True)
     return colors[count.argmax()]
 
 
@@ -99,17 +100,21 @@ def get_rgb_disp(img_name):
     return rgb_array, disp
 
 
+# =============== MAIN FUNCTION ==================================================================================
+# preparing variables to store data
 X = []
 y = []
 data_rows_used = 0
+
+# getting only rated generated image data
 generated_images = Generated.query.filter(Generated.rating != None)
 
 for generated in generated_images:
-    print(generated)
+    print("getting the data. This might take a while.")
+
+    # getting 
     style = Style.query.filter(Style.fk_content_id == generated.fk_content_id).filter(Style.used == True).first()
-    print(style)
     content = Content.query.filter(Content.id == generated.fk_content_id).first()
-    print(content)
     if style != None:
         style_name = style.file_name
         content_name = content.file_name
@@ -135,22 +140,19 @@ for generated in generated_images:
         y.append([generated.epochs, generated.steps, generated.content_weight, generated.type])
         data_rows_used = data_rows_used + 1
 
-print("x =" + str(X))
-print("y =" + str(y))
 print("model fitting")
+
 # define model
 model = KNeighborsRegressor()
+
 # fit model
 model.fit(X, y)
+
 print("done")
+
+# saving the model
 filename = 'KNN_model.sav'
 pickle.dump(model, open(filename, 'wb'))
-print("saved")
 print("data rows used: " + str(data_rows_used))
-data_in = [[128, 144, 160, 224, 217, 204, 131, 96, 68, 69, 42, 27, 202, 153, 98,
-            3222.785511159022, 80, 80, 45, 179, 87, 125, 231, 138, 106, 44, 62, 111, 104, 110, 169, 3693.4577149483, 10]]
-yhat = model.predict(data_in)
-print(int(round(yhat[0][0])))
-print(int(round(yhat[0][1])))
-print(int(round(yhat[0][2])))
-print(int(round(yhat[0][3])))
+print("saved")
+

@@ -1,15 +1,18 @@
+// function that hides some of the unnecessary details from user
 function hide(id) {
     if(!$(id).hasClass('hide')){
     $(id).addClass('hide');
  }
 }
 
+// function that shows hidden details to the user
 function show(id) {
     if ($(id).hasClass('hide')) {
         $(id).removeClass('hide');
     }
 }
 
+// function for disabling front-end components that are not allowed at certain time
 function disableEverything() {
     $('.input-button').prop('disabled', true);
     $('#type1').prop('disabled', true);
@@ -21,6 +24,7 @@ function disableEverything() {
     $('#review-btn-id').prop('disabled', true);
 }
 
+// function for enabling the disabled front-end components
 function enableEverything() {
     $('.input-button').prop('disabled', false);
     $('#type1').prop('disabled', false);
@@ -32,7 +36,7 @@ function enableEverything() {
     $('#review-btn-id').prop('disabled', false);
 }
 
-//removes image with button click
+//removes style image with button click
 function removeImage(image_id, button_id, input_id) {
     $(image_id).attr('src', '');
     $(input_id).val('');
@@ -42,17 +46,20 @@ function removeImage(image_id, button_id, input_id) {
     hide('#review-container-id');
 }
 
-//file reader function
+// function for reading files
 function readFile(input, img_id) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         const fileType = input.files[0]['type'];
         const validImageTypes = ['image/jpg', 'image/jpeg', 'image/png'];
         if (!validImageTypes.includes(fileType)) {
-            alert("Only jpg png jpeg.");
+
+            // error message
+            alert("Only .jpg .png .jpeg file types allowed.");
             $(img_id).attr('src', "");
             return
         }
+
         reader.onload = function (e) {
             let dataURL = reader.result;
             $(img_id).attr('src', dataURL);
@@ -121,6 +128,7 @@ function getStyleImagesArray() {
     return style_images;
 }
 
+// displays errors if no images selected and clicked "Test"
 function validation() {
     passed = true;
     //checking if content image is selected
@@ -141,11 +149,14 @@ function validation() {
     return passed;
 }
 
+// selects image rating
 function selectRating() {
     let val = $('[name="rating"]:checked').val();
     return val;
 }
 
+// function for getting info about which test image user selected
+// for further generation
 function getChosenTest() {
     let img;
     if ($('#test1').prop("checked") === true) {
@@ -160,9 +171,9 @@ function getChosenTest() {
     return img;
 }
 
-//main
+//main front-end function
 $(document).ready(function() {
-    let styleDisplay = 1;
+    // displaying images when chosen
     $("#content-img-upload").change(function () {
         readFile(this, '#content-img-id');
         $('#generate-btn-id').prop('disabled', true);
@@ -197,10 +208,13 @@ $(document).ready(function() {
         show('#remove4');
     });
 
+    // clicking "Test" calls testing function
     $('#test-btn-id').click(function (event) {
         if(!validation()) {
             return;
         }
+
+        // hiding and disabling components that are not allowed during testing
         disableEverything();
         hide('#generate-container');
         hide('#generate-container-id');
@@ -214,6 +228,7 @@ $(document).ready(function() {
         show('#test-loader');
         show('#test-loader-text');
 
+        // move to loader to indicate the start of testing
         $("body,html").animate({
             scrollTop: $("#testing-container-id").offset().top
         },800);
@@ -223,10 +238,10 @@ $(document).ready(function() {
         let epochs = $('#epoch-range-id').val();
         let steps =  $('#steps-range-id').val();
         let content_weight =  $('#content-weight-id').val();
-        console.log($('#content-weight-id').val());
         let style_layers = getStyleLayers();
         let content_layer = getContentLayer();
 
+        // creating the message
         let message = {
             content_image: content_image,
             style_images: style_images,
@@ -237,9 +252,12 @@ $(document).ready(function() {
             content_layer: content_layer
 
         }
-        console.log("Testing");
+
+        // calling HTTP post request with user data
         $.post(Flask.url_for("test"), JSON.stringify(message),
             function (response) {
+
+                // when done, everything that is allowed is enabled and displayed again
                 enableEverything();
                 hide('#test-loader');
                 hide('#test-loader-text');
@@ -249,6 +267,8 @@ $(document).ready(function() {
                 $('#generate-btn-id').prop('disabled', false);
                 hide('#generate-text');
                 show('#generate-container-id');
+
+                // showing the test images
                 $('#test-generated1-img-id').attr('src', "/static/generated/" + response.result.test_images[0])
                     .show();
 
@@ -260,14 +280,19 @@ $(document).ready(function() {
                 $('#test1').attr('value', response.result.test_images[0]);
                 $('#test2').attr('value', response.result.test_images[1]);
                 $('#test3').attr('value', response.result.test_images[2]);
-                check()
+
+                check();
+
                 show('#generate-btn-id');
+
+                // scrolling to the generated image
                 $("body,html").animate({
                     scrollTop: $("#testing-container-id").offset().top
                 },800);
             });
     });
 
+    // when "Generate" is clicked
     $('#generate-btn-id').click(function (event) {
         if(!validation()) {
             return;
@@ -278,6 +303,7 @@ $(document).ready(function() {
         show('#loader');
         show('#result-container-id');
         disableEverything();
+
         $("body,html").animate({
             scrollTop: $("#result-container-id").offset().top
           },800);
@@ -288,7 +314,6 @@ $(document).ready(function() {
             file_name: image
         }
 
-        console.log("Generating");
         $.post(Flask.url_for("generate"), JSON.stringify(message),
             function (response) {
                 enableEverything();
@@ -306,17 +331,19 @@ $(document).ready(function() {
             });
     });
 
-
+    // when "Submit" is clicked
     $('#review-btn-id').click(function (event) {
+        disableEverything();
+        show('#review-loader');
+
         let file_name = $('#generated-img-id').attr('alt');
         let rating = selectRating();
+
         let message = {
             file_name: file_name,
             rating: rating
         }
-        disableEverything();
-        show('#review-loader');
-        console.log('rating');
+
         $.post(Flask.url_for("review"), JSON.stringify(message),
             function (response) {
                 show('#thank-you-id');

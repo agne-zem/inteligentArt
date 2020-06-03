@@ -1,14 +1,18 @@
 $(document).ready(function() {
+    // calls function to check how much time will it
+    // take to generate bigger image of user selected test image
     $('input:radio[name="test"]').change(function() {
         check();
     });
 });
 
+//function checking generating time
 function check() {
     disableEverything();
     show('#check-loader');
     let img = $('#test1').val();
 
+    // identifying which test image the user has chosen
     if ($('#test1').prop("checked") === true) {
         img = $('#test1').val();
     }
@@ -18,15 +22,14 @@ function check() {
     if ($('#test3').prop("checked") === true) {
         img = $('#test3').val();
     }
-    if ($('#test4').prop("checked") === true) {
-    img = $('#test4').val();
-    }
 
+    // creating a message for HTTP post request
     let message = {
         image: img
     }
 
-    console.log("Checking");
+    // HTTP post request that checks how much time will the generation take
+    // displays response (time, rounded) for user
     $.post(Flask.url_for("guess_time"), JSON.stringify(message),
         function (response) {
             hide('#check-loader');

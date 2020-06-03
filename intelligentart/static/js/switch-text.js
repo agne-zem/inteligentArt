@@ -5,6 +5,7 @@ $(document).ready(function () {
     switchText();
 });
 
+// switches text in homepage according to the size of the screen
 function switchText () {
     if($(window).width() > 992) {
         $('.showcase-text').html('Some works that were made using this website. On the left is the generated image,\n' +

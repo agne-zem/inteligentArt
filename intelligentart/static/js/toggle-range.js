@@ -1,3 +1,4 @@
+// functions for toggling parameter values
 var epochRange = $('#epoch-range-id'),
     epochValue = $('#epoch-span-id'),
     stepsRange = $('#steps-range-id'),

@@ -1,5 +1,11 @@
 @import "header.less";
 
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
 .welcome-container {
   display: flex;
   justify-content: center;
@@ -101,8 +107,11 @@
 .gallery-style-frame,
 .gallery-content-frame {
   margin: 8px;
+  text-align: center;
+  border: 1px solid @dimgray;
 
   img {
+    vertical-align: middle;
     max-height: 100%;
     max-width: 100%;
   }
@@ -173,8 +182,8 @@
 
   .gallery-style-frame,
   .gallery-content-frame {
-    max-height: 224px;
-    max-width: 224px;
+    height: 224px;
+    width: 224px;
   }
 
   .welcome-image-container {
@@ -233,8 +242,8 @@
 
   .gallery-style-frame,
   .gallery-content-frame {
-    max-height: 224px;
-    max-width: 224px;
+    height: 224px;
+    width: 224px;
   }
 }
 
@@ -287,8 +296,7 @@
 
   .gallery-style-frame,
   .gallery-content-frame {
-    max-height: 160px;
-    max-width: 160px;
+    height: 160px;
+    width: 160px;
   }
 }
-

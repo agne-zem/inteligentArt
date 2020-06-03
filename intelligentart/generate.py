@@ -110,8 +110,8 @@ def get_rgb_disp(img_name):
     # cv2.imshow('Sorted by HSV values', np.hstack(sorted_bars))
     # cv2.imshow(f'{num_clusters} Most Common Colors', np.hstack(bars))
     color = unique_count_app(img)
-    stand_nuo = std(img)
-    disp = stand_nuo**2
+    std_v = std(img)
+    disp = std_v**2
     return rgb_array, disp
 
 # prepares image

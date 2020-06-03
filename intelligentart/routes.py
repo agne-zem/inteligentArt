@@ -9,21 +9,25 @@ from intelligentart.generate import run_rate
 import uuid
 
 
+# route for homepage
 @app.route("/")
 def home():
     return render_template('home.html')
 
 
+# route for about page
 @app.route("/about")
 def about():
     return render_template('about.html')
 
 
+# route for creating page
 @app.route("/create")
 def create():
     return render_template('create.html')
 
 
+# route for guessing generation time
 @app.route("/guess", methods=["GET", "POST"])
 @cross_origin()
 def guess_time():
@@ -43,6 +47,7 @@ def guess_time():
         return jsonify(response)
 
 
+# route for testing
 @app.route("/test", methods=["GET", "POST"])
 @cross_origin()
 def test():
@@ -69,6 +74,7 @@ def test():
         return jsonify(response)
 
 
+# route for generating bigger image
 @app.route("/generate", methods=["GET", "POST"])
 @cross_origin()
 def generate():
@@ -89,6 +95,7 @@ def generate():
         return jsonify(response)
 
 
+# route for saving the review
 @app.route("/review", methods=["GET", "POST"])
 @cross_origin()
 def review():

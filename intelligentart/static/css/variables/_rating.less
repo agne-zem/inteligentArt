@@ -6,7 +6,6 @@ form {
 
 .user-rating {
     direction: rtl;
-    font-size: 20px;
     unicode-bidi: bidi-override;
     padding: 10px 0;
     display: inline-block;
@@ -55,4 +54,18 @@ form {
     color: @dark-slate-gray;
     font-weight: bold;
     font-size: 3em;
+}
+
+//mobile
+@media (max-width: @break-sm) {
+    .user-rating {
+        font-size: 18px;
+    }
+}
+
+//other
+@media (min-width: @break-sm) {
+    .user-rating {
+        font-size: 22px;
+    }
 }
